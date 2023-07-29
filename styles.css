@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+#result {
+  grid-column: 1 / -1;
+  font-size: 24px;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 10px;
+}
