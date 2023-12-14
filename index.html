@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora</title>
   <link rel="stylesheet" href="styles.css">
+  <!DOCTYPE html>
+
+  <title>Salvar Dados no GitHub Pages</title>
+
+<body>
+
+<div style="text-align: center; margin-top: 20%;">
+  <label for="data">Digite seus dados:</label><br>
+  <textarea id="data" rows="4" cols="50"></textarea><br>
+  <button onclick="salvarDados()">Salvar</button>
+  <button onclick="carregarDados()">Carregar</button>
+</div>
+
+<script>
+function salvarDados() {
+  var dados = document.getElementById('data').value;
+  localStorage.setItem('meusDados', dados);
+  alert('Dados salvos com sucesso!');
+}
+
+function carregarDados() {
+  var dados = localStorage.getItem('meusDados');
+  if (dados) {
+    document.getElementById('data').value = dados;
+    alert('Dados carregados com sucesso!');
+  } else {
+    alert('Nenhum dado salvo.');
+  }
+}
+</script>
+
+
 </head>
 <body>
   <div class="calculator">
